@@ -136,7 +136,7 @@
 //#define ANET_LCD2004    // 5 Button Keypad Model
 
 //===========================================================================
-// ******************     ARTILLERY/EVNOVO PRINTERS      ********************
+// **********************     ARTILLERY PRINTERS      ***********************
 //===========================================================================
 
 //===========================================================================
@@ -163,19 +163,6 @@
 //#define ARTILLERY_AL4_X_AXIS_TMC2208
 //#define ARTILLERY_AL4_Y_AXIS_TMC2208
 //#define ARTILLERY_AL4_Z_AXIS_TMC2208
-
-//===========================================================================
-// Sidewinder X1 Options - Select 'Arduino Mega 2560' from Tools > Board
-//===========================================================================
-//#define SIDEWINDER_X1
-
-// NOTE: The Sidewinder X1 is ONLY compatible with our firmware once you have installed the LCD conversion kit
-// the stock LCD is not supported due to closed source firmware limitations on it.
-// You can get the LCD conversion kit here: LINK HERE
-
-// EZABL Probe Mounts
-//#define SIDEWINDER_X1_OEM
-//#define CUSTOM_PROBE
 
 //===========================================================================
 // ***********************     ANYCUBIC PRINTERS     ************************
@@ -278,9 +265,10 @@
 //===========================================================================
 //#define CR10S_PRO
 
-// NOTE: The CR-10S Pro is ONLY compatible with our firmware once you have installed the LCD conversion kit
-// the stock LCD is not supported due to closed source firmware limitations on it.
-// You can get the LCD conversion kit here: https://www.th3dstudio.com/product/cr-10s-pro-lcd-ezabl-upgrade-kit/
+// What LCD are you using? (Only 12864 LCD is supported)
+//#define RR_LCD_UPGRADE
+// Stock Touch LCD is not supported at this time.
+// Info on converting the LCD can be found here: https://www.th3dstudio.com/product/cr-10s-pro-lcd-ezabl-upgrade-kit/
 
 // EZABL/ABL Probe Mounts
 //#define CR10S_PRO_OEM
@@ -324,10 +312,6 @@
 //===========================================================================
 //#define CRX
 
-// NOTE: The CR-X is ONLY compatible with our firmware once you have installed the LCD conversion kit
-// the stock LCD is not supported due to closed source firmware limitations on it.
-// You can get the LCD conversion kit here: https://www.th3dstudio.com/product/cr-x-12864-lcd-upgrade-kit/
-
 // If you are using our EZOut V2 filament sensor kit please follow the install guide
 // E0 (Left Extruder) sensor connects to X+
 // E1 (Right Extruder) sensor connects to Y+
@@ -360,8 +344,11 @@
 //#define PETSFANG  //This is the RIGHT mounted version - if using the left mount please use the CUSTOM_PROBE option.
 //#define CUSTOM_PROBE
 
+// Use Ender Bootscreeen instead of TH3D
+//#define ENDER_BOOT
+
 //===========================================================================
-// Creality Ender 3/3 Pro Options - Select 'Sanguino 1284p' from Tools > Board
+// Creality Ender 3 Options - Select 'Sanguino 1284p' from Tools > Board
 //===========================================================================
 //#define ENDER3
 
@@ -379,11 +366,6 @@
 //#define PETSFANG  //This is the RIGHT mounted version - if using the left mount please use the CUSTOM_PROBE option.
 //#define CUSTOM_PROBE
 
-// Ender Xtender Kit Options
-//#define ENDER_XTENDER_400
-//#define ENDER_XTENDER_400XL
-//#define ENDER_XTENDER_XL
-
 //=================================================================================================
 // README - THE BELOW SETTINGS ARE ONLY FOR USING THE CR-10S DUAL BOARD WITH THE ENDER 3
 // DO NOT UNCOMMENT THE ABOVE #define ENDER3 LINE IF USING THE DUAL BOARD
@@ -393,8 +375,7 @@
 // CR-10S board but rotate it 180 degrees. The LCD end of the cable goes to EXP3 on the Ender 3 LCD.
 // You will have to force it into the EXP1 but it will fit and work.
 // 
-// EZABL and EZOut support are still supported, just use the lines above this comment section.
-// Ender Xtender options still work, just use the lines above this comment section.
+// EZABL and EZOut support are still supported just use the lines above this comment section.
 //=================================================================================================
 //#define ENDER3_DUALBOARD
 
@@ -409,6 +390,9 @@
 // If you are using a 2nd EZOut V2 (connects to Y+ connector) filament sensor kit please follow the install guide
 // and then uncomment the #define EZOUTV2_DUAL_ENABLE line below. Do NOT ever connect our filament sensor without the supplied adapter board.
 //#define EZOUTV2_DUAL_ENABLE
+
+// Use Ender Bootscreeen instead of TH3D
+//#define ENDER_BOOT
 
 //===========================================================================
 // Creality Ender 4 Options - Select 'Arduino Mega 2560' from Tools > Board
@@ -428,10 +412,13 @@
 //#define ENDER4_OEM_RIGHT //need to design
 //#define CUSTOM_PROBE
 
+// Use Ender Bootscreeen instead of TH3D
+//#define ENDER_BOOT
+
 //===========================================================================
 // Creality Ender 5 Options - Select 'Sanguino 1284p' from Tools > Board
 //===========================================================================
-//#define ENDER5
+#define ENDER5
 
 // If you are using our EZOut V1/V2 (connected to LCD header) filament sensor kit please follow the install guide
 // and then uncomment the #define EZOUT_ENABLE line below.
@@ -446,11 +433,13 @@
 //#define TM3DAERO
 //#define TM3DAERO_EXTENDED
 //#define PETSFANG  //This is the RIGHT mounted version - if using the left mount please use the CUSTOM_PROBE option.
-//#define CUSTOM_PROBE
+#define CUSTOM_PROBE
+
+// Use Ender Bootscreeen instead of TH3D
+//#define ENDER_BOOT
 
 // If you have the new Ender 5 or Ender 5 Pro Model that has the new 800steps/mm Z leadscrew uncomment the below option to set the correct steps/mm
-//#define ENDER5_NEW_LEADSCREW
-
+#define ENDER5_NEW_LEADSCREW
 //=================================================================================================
 // README - THE BELOW SETTINGS ARE ONLY FOR USING THE CR-10S DUAL BOARD WITH THE ENDER 5
 // DO NOT UNCOMMENT THE ABOVE #define ENDER5 LINE IF USING THE DUAL BOARD
@@ -481,9 +470,10 @@
 //===========================================================================
 //#define ENDER5_PLUS
 
-// NOTE: Ender 5 Plus is ONLY compatible with our firmware once you have installed the LCD conversion kit
-// the stock LCD is not supported due to closed source firmware limitations on it.
-// You can get the LCD conversion kit here: https://www.th3dstudio.com/product/ender-5-plus-12864-lcd-upgrade-kit/
+// What LCD are you using? (Only 12864 LCD is supported)
+//#define RR_LCD_UPGRADE
+// Stock Touch LCD is not supported at this time.
+// Info on converting the LCD can be found here: https://www.th3dstudio.com/product/ender-5-plus-12864-lcd-upgrade-kit/
 
 // EZABL/ABL Probe Mounts - Uses some CR-10/Ender 3 Mounts
 //#define CR10_OEM
@@ -792,8 +782,8 @@
 #define MKS_Z_ENDSTOP 0
 
 // Homing Settings
-#define X_HOME_LOCATION 0
-#define Y_HOME_LOCATION 0
+#define X_HOME_LOCATION 220
+#define Y_HOME_LOCATION 220
 
 // Steps per MM Settings
 #define MKS_X_STEPS 80
@@ -856,7 +846,7 @@
 
 // If you want more or less EZABL probe points change the number below (only used if EZABL enabled)
 // Default is 3 which gives you 3x3 grid for a total of 9 points. STICK WITH ODD NUMBERS
-#define EZABL_POINTS 3
+#define EZABL_POINTS 7
 
 // If you want to change how far in or out the probe senses change EZABL_PROBE_EDGE value below
 // Most Machines - 35
@@ -917,8 +907,8 @@
   *      O-- FRONT --+
   *    (0,0)
   */
-  #define X_PROBE_OFFSET_FROM_EXTRUDER 10  // X offset: -left  +right  [of the nozzle]
-  #define Y_PROBE_OFFSET_FROM_EXTRUDER 10  // Y offset: -front +behind [the nozzle]
+  #define X_PROBE_OFFSET_FROM_EXTRUDER -42  // X offset: -left  +right  [of the nozzle]
+  #define Y_PROBE_OFFSET_FROM_EXTRUDER -16  // Y offset: -front +behind [the nozzle]
 #endif
 
 //===========================================================================
@@ -1030,7 +1020,7 @@
 // custom XY offsets. This is provided for convenience and is unsupported with included product support.
 // How to use - measure (home XY then jog using the LCD 1mm at a time) the X and Y distance the nozzle is off
 // the build plate and then put those as NEGATIVE values below, positive values will NOT work (move your endstops to fix a positve offset).
-//#define HOME_ADJUST
+#define HOME_ADJUST
 #define X_HOME_ADJUST_LOCATION -10
 #define Y_HOME_ADJUST_LOCATION -10
 
@@ -1046,14 +1036,14 @@
 // and then enter your probe offsets in the CUSTOM_PROBE section above. The Pin 27 boards on other ecommerce sites are clones of our original EZOut.
 // If you want to support the people that originally came up with the board you can get our EZOut breakout board here: http://EZOut.TH3DStudio.com
 // Sales from our shop allow us to allocate time for community firmware development at no charge to you. <3
-//#define BLTOUCH
+#define BLTOUCH
 
 // Here is where you set your servo pin. 
 // EZOut Servo Pin Numbers: 
 // Anet(with 2004LCD)/Ender3/5/CR-10 - 27
 // Anet(with 12864LCD)/Ender 2 - 29
 // For 2560 boards look for the pin you connected the servo wire to and enter below (typically 11).
-//#define SERVO0_PIN 27
+#define SERVO0_PIN 27
 
 // The BL Touch is NOT supported on the Wanhao i3 Plus, use the ADVi3++ Firmware instead if you want to use a BL Touch.
 
@@ -1096,7 +1086,7 @@
 
 #define LCD_LANGUAGE en
 
-#define UNIFIED_VERSION "TH3D U1.R2.B1"
+#define UNIFIED_VERSION "TH3D U1.R2.A8"
 #include "Configuration_backend.h"
 
 #endif // CONFIGURATION_H
