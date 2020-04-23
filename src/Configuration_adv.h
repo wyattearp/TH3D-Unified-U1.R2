@@ -30,7 +30,9 @@
 #endif
 
 #if ENABLED(BLTOUCH)
-  #define BLTOUCH_DELAY 750
+  #ifndef BLTOUCH_DELAY
+    #define BLTOUCH_DELAY 750
+  #endif
   #define BLTOUCH_SET_5V_MODE
   #define BLTOUCH_FORCE_MODE_SET
 #endif // BLTOUCH
