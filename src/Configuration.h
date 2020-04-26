@@ -420,6 +420,9 @@
 //===========================================================================
 #define ENDER5
 
+// this is annoying that this is not default behavior
+#define RESTORE_LEVELING_AFTER_G28
+
 // If you are using our EZOut V1/V2 (connected to LCD header) filament sensor kit please follow the install guide
 // and then uncomment the #define EZOUT_ENABLE line below.
 // Do NOT ever connect our filament sensor without the supplied adapter board.
