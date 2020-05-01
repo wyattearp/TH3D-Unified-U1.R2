@@ -165,6 +165,19 @@
 //#define ARTILLERY_AL4_Z_AXIS_TMC2208
 
 //===========================================================================
+// Sidewinder X1 Options - Select 'Arduino Mega 2560' from Tools > Board
+//===========================================================================
+//#define SIDEWINDER_X1
+
+// NOTE: The Sidewinder X1 is ONLY compatible with our firmware once you have installed the LCD conversion kit
+// the stock LCD is not supported due to closed source firmware limitations on it.
+// You can get the LCD conversion kit here: https://www.th3dstudio.com/product/evonvo-artillery-sidewinder-x1-lcd-conversion-kit/
+
+// EZABL Probe Mounts
+//#define SIDEWINDER_X1_OEM
+//#define CUSTOM_PROBE
+
+//===========================================================================
 // ***********************     ANYCUBIC PRINTERS     ************************
 //===========================================================================
 
